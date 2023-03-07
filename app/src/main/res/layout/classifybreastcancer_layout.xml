@@ -1,0 +1,52 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1"
+    tools:context=".ClassifyBreastCancerFragment">
+    
+		    <TableRow>
+				 <TextView
+				             android:id="@+id/classifyBreastCancerBreastCancerLabel"
+				             android:textStyle="bold"
+				             android:background="#EEFFBB"
+				             android:text="BreastCancer:" />
+				 <Spinner
+				             android:id="@+id/classifyBreastCancerBreastCancerSpinner"
+				             android:layout_width="fill_parent"
+				             android:layout_height="wrap_content"
+				             android:layout_span="4" />
+			</TableRow>
+
+	<TableRow>
+	<Button
+		android:id="@+id/classifyBreastCancerOK"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="#AAAAFF"
+		android:layout_column="1"
+		android:text="OK"
+		android:onClick="classifyBreastCancerOK" />
+	<Button
+		android:id="@+id/classifyBreastCancerCancel"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="#FFAAAA"
+		android:layout_column="3"
+		android:text="Cancel"
+		android:onClick="classifyBreastCancerCancel" />
+	</TableRow>
+						    
+	<TableRow>
+	<TextView
+		android:id="@+id/classifyBreastCancerResultLabel"
+		android:textStyle="bold"
+		android:background="#EEFFBB"
+		android:text="Result:" />
+	<TextView
+		android:id="@+id/classifyBreastCancerResult"
+		android:textStyle="bold"
+		android:layout_span="4" />
+	</TableRow>
+
+</TableLayout>

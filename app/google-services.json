@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1058398725434",
+    "firebase_url": "https://breastcancer-3d45c-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "breastcancer-3d45c",
+    "storage_bucket": "breastcancer-3d45c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058398725434:android:eee04bc22fd2c706fa5c03",
+        "android_client_info": {
+          "package_name": "com.example.breastcancer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058398725434-ocjhl1nudt9favvte2m44hm435i14ueb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARD8pDZmBShhLPDbEuAb1bYWiX0tN5_HY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1058398725434-ocjhl1nudt9favvte2m44hm435i14ueb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1058398725434-04ib2svi63pcs1ksfp7dhb774si475r8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.lyanalwakeel.breastCancer"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

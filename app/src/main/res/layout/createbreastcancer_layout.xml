@@ -1,0 +1,172 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="1"
+    tools:context=".CreateBreastCancerFragment" >
+
+    <TableRow>
+		      <TextView
+				   android:id="@+id/createBreastCanceridLabel"
+				   android:textStyle="bold"
+				   android:background="#EEFFBB"
+				   android:text="Id:" />
+				
+	  <EditText
+		   android:id="@+id/createBreastCanceridField"
+
+		   android:layout_span="4" />
+	</TableRow>	
+    <TableRow>
+		      <TextView
+				   android:id="@+id/createBreastCancerageLabel"
+				   android:textStyle="bold"
+				   android:background="#EEFFBB"
+				   android:text="Age:" />
+				
+	  <EditText
+		   android:id="@+id/createBreastCancerageField"
+		android:inputType="number|numberDecimal"
+
+		   android:layout_span="4" />
+	</TableRow>	
+    <TableRow>
+		      <TextView
+				   android:id="@+id/createBreastCancerbmiLabel"
+				   android:textStyle="bold"
+				   android:background="#EEFFBB"
+				   android:text="Bmi:" />
+				
+	  <EditText
+		   android:id="@+id/createBreastCancerbmiField"
+		android:inputType="number|numberDecimal"
+
+		   android:layout_span="4" />
+	</TableRow>	
+    <TableRow>
+		      <TextView
+				   android:id="@+id/createBreastCancerglucoseLabel"
+				   android:textStyle="bold"
+				   android:background="#EEFFBB"
+				   android:text="Glucose:" />
+				
+	  <EditText
+		   android:id="@+id/createBreastCancerglucoseField"
+		android:inputType="number|numberDecimal"
+
+		   android:layout_span="4" />
+	</TableRow>	
+    <TableRow>
+		      <TextView
+				   android:id="@+id/createBreastCancerinsulinLabel"
+				   android:textStyle="bold"
+				   android:background="#EEFFBB"
+				   android:text="Insulin:" />
+				
+	  <EditText
+		   android:id="@+id/createBreastCancerinsulinField"
+		android:inputType="number|numberDecimal"
+
+		   android:layout_span="4" />
+	</TableRow>	
+    <TableRow>
+		      <TextView
+				   android:id="@+id/createBreastCancerhomaLabel"
+				   android:textStyle="bold"
+				   android:background="#EEFFBB"
+				   android:text="Homa:" />
+				
+	  <EditText
+		   android:id="@+id/createBreastCancerhomaField"
+		android:inputType="number|numberDecimal"
+
+		   android:layout_span="4" />
+	</TableRow>	
+    <TableRow>
+		      <TextView
+				   android:id="@+id/createBreastCancerleptinLabel"
+				   android:textStyle="bold"
+				   android:background="#EEFFBB"
+				   android:text="Leptin:" />
+				
+	  <EditText
+		   android:id="@+id/createBreastCancerleptinField"
+		android:inputType="number|numberDecimal"
+
+		   android:layout_span="4" />
+	</TableRow>	
+    <TableRow>
+		      <TextView
+				   android:id="@+id/createBreastCanceradiponectinLabel"
+				   android:textStyle="bold"
+				   android:background="#EEFFBB"
+				   android:text="Adiponectin:" />
+				
+	  <EditText
+		   android:id="@+id/createBreastCanceradiponectinField"
+		android:inputType="number|numberDecimal"
+
+		   android:layout_span="4" />
+	</TableRow>	
+    <TableRow>
+		      <TextView
+				   android:id="@+id/createBreastCancerresistinLabel"
+				   android:textStyle="bold"
+				   android:background="#EEFFBB"
+				   android:text="Resistin:" />
+				
+	  <EditText
+		   android:id="@+id/createBreastCancerresistinField"
+		android:inputType="number|numberDecimal"
+
+		   android:layout_span="4" />
+	</TableRow>	
+    <TableRow>
+		      <TextView
+				   android:id="@+id/createBreastCancermcpLabel"
+				   android:textStyle="bold"
+				   android:background="#EEFFBB"
+				   android:text="Mcp:" />
+				
+	  <EditText
+		   android:id="@+id/createBreastCancermcpField"
+		android:inputType="number|numberDecimal"
+
+		   android:layout_span="4" />
+	</TableRow>	
+    <TableRow>
+				      <TextView
+						   android:id="@+id/createBreastCanceroutcomeLabel"
+								   android:textStyle="bold"
+						   android:background="#EEFFBB"
+						   android:text="Outcome:" />
+						
+			  <TextView
+				   android:id="@+id/createBreastCanceroutcomeView"
+				   android:textStyle="bold"
+				   android:layout_span="4" />
+			</TableRow>	
+	<TableRow>
+	  <Button
+		   android:id="@+id/createBreastCancerOK"
+		   android:layout_width="wrap_content"
+		   android:layout_height="wrap_content"
+		   android:layout_column="1"
+		   android:background="#AAAAFF"
+		   android:text="OK"
+		   android:onClick="createBreastCancerOK"/>
+	  <Button
+		   android:id="@+id/createBreastCancerCancel"
+		   android:layout_width="wrap_content"
+		   android:layout_height="wrap_content"
+		   android:layout_column="3"
+		   android:background="#FFAAAA"
+		   android:text="Cancel"
+		   android:onClick="createBreastCancerCancel"/>
+	 </TableRow>		
+
+</TableLayout>
+</ScrollView>
