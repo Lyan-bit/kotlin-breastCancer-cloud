@@ -97,6 +97,7 @@ class BreastCancerDAO {
           for (item in rows.indices) {
               val row = rows[item]
               if (row == null || row.trim { it <= ' ' }.length == 0) {
+                  //trim
               } else {
                   val x: BreastCancer? = parseCSV(row)
                   if (x != null) {
@@ -124,6 +125,7 @@ class BreastCancerDAO {
                         }
                     }
                 } catch (e: Exception) {
+                    //e
                 }
             }
             return res
@@ -185,10 +187,12 @@ class BreastCancerDAO {
                 val ex: BreastCancer = es[i]
                 val jx = writeJSON(ex)
                 if (jx == null) {
+                    //null
                 } else {
                     try {
                         result.put(jx)
                     } catch (ee: Exception) {
+                        //ee
                     }
                 }
             }
