@@ -38,6 +38,7 @@ class FirebaseDB() {
                     locals.addAll(BreastCancer.BreastCancerAllInstances)
                     for (x in locals) {
                         if (keys.contains(x.id)) {
+                            //check
                         } else {
                             BreastCancer.killBreastCancer(x.id)
                         }
