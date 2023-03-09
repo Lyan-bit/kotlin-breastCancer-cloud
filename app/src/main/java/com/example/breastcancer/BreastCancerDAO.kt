@@ -30,7 +30,7 @@ class BreastCancerDAO {
         }
 
         fun isCached(id: String?): Boolean {
-            val x: BreastCancer = BreastCancer.BreastCancerIndex.get(id) ?: return false
+            BreastCancer.BreastCancerIndex.get(id) ?: return false
             return true
         }
 
