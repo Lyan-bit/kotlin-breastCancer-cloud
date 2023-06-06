@@ -25,13 +25,6 @@ class ModelFacade private constructor(context: Context) {
     	//init
         fileSystem = FileAccessor(context)
 	}
-
-    companion object {
-        private var instance: ModelFacade? = null
-        fun getInstance(context: Context): ModelFacade {
-            return instance ?: ModelFacade(context)
-        }
-    }
     
 	/* This metatype code requires OclType.java, OclAttribute.java, OclOperation.java */
 	fun initialiseOclTypes() {
