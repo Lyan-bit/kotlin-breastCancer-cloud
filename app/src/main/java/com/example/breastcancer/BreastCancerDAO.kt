@@ -14,7 +14,7 @@ class BreastCancerDAO {
             if (command != null) {
                 res += command
             }
-            if (pars.size == 0) {
+            if (pars.isEmpty()) {
                 return res
             }
             res = "$res?"
@@ -30,12 +30,12 @@ class BreastCancerDAO {
         }
 
         fun isCached(id: String?): Boolean {
-            BreastCancer.BreastCancerIndex.get(id) ?: return false
+            BreastCancer.BreastCancerIndex[id] ?: return false
             return true
         }
 
         fun getCachedInstance(id: String): BreastCancer? {
-            return BreastCancer.BreastCancerIndex.get(id)
+            return BreastCancer.BreastCancerIndex[id]
         }
 
       fun parseCSV(line: String?): BreastCancer? {
@@ -43,7 +43,7 @@ class BreastCancerDAO {
               return null
           }
           val line1vals: ArrayList<String> = Ocl.tokeniseCSV(line)
-          var breastCancerx: BreastCancer? = BreastCancer.BreastCancerIndex.get(line1vals[0])
+          var breastCancerx: BreastCancer? = BreastCancer.BreastCancerIndex[line1vals[0]]
           if (breastCancerx == null) {
               breastCancerx = BreastCancer.createByPKBreastCancer(line1vals[0])
           }
@@ -67,7 +67,7 @@ class BreastCancerDAO {
                 null
             } else try {
                 val id = obj.getString("id")
-                var breastCancerx: BreastCancer? = BreastCancer.BreastCancerIndex.get(id)
+                var breastCancerx: BreastCancer? = BreastCancer.BreastCancerIndex[id]
                 if (breastCancerx == null) {
                     breastCancerx = BreastCancer.createByPKBreastCancer(id)
                 }
@@ -96,7 +96,7 @@ class BreastCancerDAO {
           val rows: ArrayList<String> = Ocl.parseCSVtable(lines)
           for (item in rows.indices) {
               val row = rows[item]
-              if (row == null || row.trim { it <= ' ' }.length == 0) {
+              if (row == null || row.trim { it <= ' ' }.isEmpty()) {
                   //trim
               } else {
                   val x: BreastCancer? = parseCSV(row)
@@ -160,7 +160,7 @@ class BreastCancerDAO {
             try {
                 val map = obj as HashMap<String, Object>
                 val id: String = map["id"].toString()
-                var breastCancerx: BreastCancer? = BreastCancer.BreastCancerIndex.get(id)
+                var breastCancerx: BreastCancer? = BreastCancer.BreastCancerIndex[id]
                 if (breastCancerx == null) {
                     breastCancerx = BreastCancer.createByPKBreastCancer(id)
                 }
