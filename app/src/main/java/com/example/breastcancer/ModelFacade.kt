@@ -25,33 +25,34 @@ class ModelFacade private constructor(context: Context) {
     	//init
         fileSystem = FileAccessor(context)
 	}
-    
-	/* This metatype code requires OclType.java, OclAttribute.java, OclOperation.java */
-	fun initialiseOclTypes() {
-			val breastCancerOclType: OclType = OclType.createByPKOclType("BreastCancer")
-		breastCancerOclType.setMetatype(BreastCancer::class.java)
-		    }
+
+	companion object {
+		private var instance: ModelFacade? = null
+		fun getInstance(context: Context): ModelFacade {
+			return instance ?: ModelFacade(context)
+		}
+	}
     
     fun createBreastCancer(x: BreastCancerVO) { 
 			 editBreastCancer(x)
 	 }
 				    
 	fun editBreastCancer(x: BreastCancerVO) {
-		     var obj = getBreastCancerByPK(x.getId())
+		     var obj = getBreastCancerByPK(x.id)
 		     if (obj == null) {
-		         obj = BreastCancer.createByPKBreastCancer(x.getId())
+		         obj = BreastCancer.createByPKBreastCancer(x.id)
 			 }
-		  obj.id = x.getId()
-		  obj.age = x.getAge()
-		  obj.bmi = x.getBmi()
-		  obj.glucose = x.getGlucose()
-		  obj.insulin = x.getInsulin()
-		  obj.homa = x.getHoma()
-		  obj.leptin = x.getLeptin()
-		  obj.adiponectin = x.getAdiponectin()
-		  obj.resistin = x.getResistin()
-		  obj.mcp = x.getMcp()
-		  obj.outcome = x.getOutcome()
+		  obj.id = x.id
+		  obj.age = x.age
+		  obj.bmi = x.bmi
+		  obj.glucose = x.glucose
+		  obj.insulin = x.insulin
+		  obj.homa = x.homa
+		  obj.leptin = x.leptin
+		  obj.adiponectin = x.adiponectin
+		  obj.resistin = x.resistin
+		  obj.mcp = x.mcp
+		  obj.outcome = x.outcome
 			 cdb.persistBreastCancer(obj)
 			 currentBreastCancer = x
 		
@@ -191,7 +192,7 @@ class ModelFacade private constructor(context: Context) {
     fun allBreastCancerIds(): ArrayList<String> {
         val res: ArrayList<String> = ArrayList()
             for (x in currentBreastCancers.indices) {
-                res.add(currentBreastCancers[x].getId())
+                res.add(currentBreastCancers[x].id)
             }
         return res
     }
