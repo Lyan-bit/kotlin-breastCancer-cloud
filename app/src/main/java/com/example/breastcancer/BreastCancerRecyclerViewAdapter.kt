@@ -25,17 +25,17 @@ class BreastCancerRecyclerViewAdapter (items: List<BreastCancerVO>, listener: Li
     @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: BreastCancerViewHolder, position: Int) {
         holder.mItem = mValues[position]
-        holder.listBreastCancerIdView.text = " " + mValues[position].getId() + " "
-        holder.listBreastCancerAgeView.text = " " + mValues[position].getAge() + " "
-        holder.listBreastCancerBmiView.text = " " + mValues[position].getBmi() + " "
-        holder.listBreastCancerGlucoseView.text = " " + mValues[position].getGlucose() + " "
-        holder.listBreastCancerInsulinView.text = " " + mValues[position].getInsulin() + " "
-        holder.listBreastCancerHomaView.text = " " + mValues[position].getHoma() + " "
-        holder.listBreastCancerLeptinView.text = " " + mValues[position].getLeptin() + " "
-        holder.listBreastCancerAdiponectinView.text = " " + mValues[position].getAdiponectin() + " "
-        holder.listBreastCancerResistinView.text = " " + mValues[position].getResistin() + " "
-        holder.listBreastCancerMcpView.text = " " + mValues[position].getMcp() + " "
-        holder.listBreastCancerOutcomeView.text = " " + mValues[position].getOutcome() + " "
+        holder.listBreastCancerIdView.text = " " + mValues[position].id + " "
+        holder.listBreastCancerAgeView.text = " " + mValues[position].age + " "
+        holder.listBreastCancerBmiView.text = " " + mValues[position].bmi + " "
+        holder.listBreastCancerGlucoseView.text = " " + mValues[position].glucose + " "
+        holder.listBreastCancerInsulinView.text = " " + mValues[position].insulin + " "
+        holder.listBreastCancerHomaView.text = " " + mValues[position].homa + " "
+        holder.listBreastCancerLeptinView.text = " " + mValues[position].leptin + " "
+        holder.listBreastCancerAdiponectinView.text = " " + mValues[position].adiponectin + " "
+        holder.listBreastCancerResistinView.text = " " + mValues[position].resistin + " "
+        holder.listBreastCancerMcpView.text = " " + mValues[position].mcp + " "
+        holder.listBreastCancerOutcomeView.text = " " + mValues[position].outcome + " "
 
         holder.mView.setOnClickListener { mListener.onListBreastCancerFragmentInteraction(holder.mItem) }
     }
